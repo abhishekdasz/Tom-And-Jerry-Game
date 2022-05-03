@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.jerry{
+    background-image: url(./images/jerry.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 145px;
+    height: 147px;
+    /* width: 123px;
+    height: 123px; */
+    position: absolute;
+    bottom: 26px;
+    left: 30px;
+}
+.obstacle{
+    background-image: url(./images/tom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 222px;
+    height: 189px;
+    /* width: 172px;
+    height: 146px; */
+    position: absolute;
+    bottom: 26px;
+    left: 60vw;
+}
+.animateJerry{
+    animation: jerry 0.6s linear;
+}
+
+@keyframes jerry{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.jerryAni{
+    animation: jerryAni 1s linear 1;
+    transform: rotate(180deg);
+}
+
+/* .gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+} */
+.gameOver{
+    position: relative;
+    position: relative;
+    top:63px;
+    font-size: 28px;
+    text-align: center; 
+    font-family: 'Tapestry', cursive;
+}
+
+#scoreCount{
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    right: 20px;
+    top: 20px;
+    width: 140px;
+    font-size: 20px;
+    font-family: 'Segoe UI';
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+@keyframes jerryAni{
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: -120px;
+    }
+}
+
+.flip{
+    transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+	float: none;
+}
+
+
